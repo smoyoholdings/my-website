@@ -3,149 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ETHANS SNEAKER CARTEL</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap" rel="stylesheet">
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Orbitron', sans-serif;
-}
-
-body{
-    background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc);
-    background-size: 400% 400%;
-    animation: gradientMove 8s infinite alternate;
-    color:white;
-    overflow-x:hidden;
-}
-
-@keyframes gradientMove{
-    0%{background-position: left;}
-    100%{background-position: right;}
-}
-
-header{
-    text-align:center;
-    padding:30px;
-    font-size:2.5rem;
-    font-weight:800;
-    letter-spacing:3px;
-    text-shadow: 0 0 20px yellow;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow{
-    from{ text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;}
-    to{ text-shadow: 0 0 20px #00ffff, 0 0 40px #ffff00;}
-}
-
-.container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:40px;
-    padding:50px;
-}
-
-.card{
-    width:280px;
-    height:380px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
-    transition: transform 0.5s, box-shadow 0.5s;
-    position:relative;
-    overflow:hidden;
-}
-
-.card:hover{
-    transform: scale(1.1) rotate(3deg);
-    box-shadow: 0 0 30px #fff;
-}
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:15px;
-    transition: transform 0.5s;
-}
-
-.card:hover img{
-    transform: scale(1.1);
-}
-
-.card h2{
-    margin:15px 0;
-}
-
-.price{
-    font-size:1.3rem;
-    margin-bottom:15px;
-}
-
-button{
-    padding:10px 20px;
-    border:none;
-    border-radius:30px;
-    background: linear-gradient(45deg, #ff00cc, #00ffff);
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.4s;
-}
-
-button:hover{
-    background: linear-gradient(45deg, #ffff00, #ff0000);
-    transform: scale(1.1);
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    font-size:0.9rem;
-    background: rgba(0,0,0,0.4);
-    margin-top:40px;
-}
-</style>
+<title>Sipho's Shoe Store</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-🔥 ETHANS SNEAKER CARTEL 🔥
+<h1>Sipho's Shoe Store</h1>
+<p>Premium Sneakers & Streetwear</p>
 </header>
 
-<div class="container">
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb" alt="Nike Dunks">
-        <h2>NIKE DUNKS</h2>
-        <div class="price">$150</div>
-        <button onclick="buy()">BUY NOW</button>
-    </div>
+<section class="hero">
+<h2>Step Into Style</h2>
+<p>Discover the best sneakers at unbeatable prices</p>
+<button onclick="shopNow()">Shop Now</button>
+</section>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" alt="El Cinco">
-        <h2>EL CINCO</h2>
-        <div class="price">$220</div>
-        <button onclick="buy()">BUY NOW</button>
-    </div>
+<section id="products">
+<h2>Our Shoes</h2>
 
+<div class="product-container">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Air Max">
+<h3>Nike Air Max</h3>
+<p>R1500</p>
+<button onclick="buy()">Buy Now</button>
 </div>
 
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6" alt="Adidas Ultraboost">
+<h3>Adidas Ultraboost</h3>
+<p>R1800</p>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77" alt="Puma RS-X">
+<h3>Puma RS-X</h3>
+<p>R1300</p>
+<button onclick="buy()">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+Sipho's Shoe Store brings you the latest sneakers and streetwear styles.
+We focus on quality, comfort and style for every sneaker lover.
+</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: siphoshoestore@gmail.com</p>
+<p>Phone: +27 71 234 5678</p>
+</section>
+
 <footer>
-© 2026 ETHANS SNEAKER CARTEL | Premium Dunks & El Cinco
+<p>© 2026 Sipho's Shoe Store</p>
 </footer>
 
-<script>
-function buy(){
-    alert("🔥 Thanks for shopping at ETHANS SNEAKER CARTEL! 🔥");
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
